@@ -1,0 +1,25 @@
+<h1> Welcome to the classroom</h1>
+
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+
+ 
+
+<ul>
+    
+    <li>
+        <a href="{% url 'classroom:create_teacher' %}">Create Teacher</a>
+    </li>
+    <li>
+        <a href="{% url 'classroom:teacher_list' %}">View Teachers</a>
+    </li>
+    <li>
+        <a href="{% url 'classroom:contact' %}">Contact</a>
+    </li>
+    <li>
+        <a href="{% url 'classroom:thankyou' %}">ThankYou</a>
+    </li>
+</ul>
